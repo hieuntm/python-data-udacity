@@ -53,6 +53,8 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = get_day_input()
 
+    print('-'*40)
+
     return city, month, day
 
 
@@ -96,6 +98,7 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
         
+    print('-'*40)
 
     return df
 
