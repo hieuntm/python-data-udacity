@@ -10,7 +10,6 @@ def get_month_input():
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     while True:
         month = input('Enter the month from [January-June] or Enter "All" for no month filter : ')
-        month = month.strip().lower()
         if month in months:
             return month
         else:
@@ -19,8 +18,7 @@ def get_month_input():
 def get_day_input():
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     while True:
-        day = input('Enter a day from [Monday-Sunday] or "all" for no day filter: ')
-        day = day.strip().lower()
+        day = input('Enter a day from [Monday-Sunday] or "all" for no day filter: ').strip().lower()
         if day in days:
             return day
         else:
@@ -29,7 +27,6 @@ def get_day_input():
 def get_city_input():
     while True:
         city = input('Enter the city you want see the data [Chicago, New York City, Washington]: ')
-        city = city.strip().lower()
         if city in CITY_DATA:
             return city
         else:
